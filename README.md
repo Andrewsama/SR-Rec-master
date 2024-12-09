@@ -75,3 +75,4 @@ Taking the Appliances dataset as an example, the correspondence between files an
 ```python9
  python run.py
 ```
+The structure of this code is based on [SComGNN](https://github.com/luohaitong/SComGNN). Thanks for their excellent work!
