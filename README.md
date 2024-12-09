@@ -24,7 +24,9 @@ We develop our codes in the following environment:
 | Avg. Degree  | 20.6     | 33.4    | 20.6         |
 |Avg. Clustering Coefficient| 0.373 |0.370 | 0.294 |
 | Sparsity     | 97.432%  | 99.913% | 99.973%      |
-## 3. Data Preprocessing
+
+
+## 3. Data preprocessing
 way1:
 - Download raw_data from https://nijianmo.github.io/amazon/index.html.
 - Put the meta data file in <tt>./data_preprocess/raw_data/</tt>.
