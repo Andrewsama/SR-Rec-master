@@ -38,7 +38,7 @@ way2:
 
 
 Taking the Appliances dataset as an example, the correspondence between files and folders is as follows
-![img_2.png](img_2.png =50x50)
+![img_2.png](img_2.png)
 
 
 
