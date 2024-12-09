@@ -131,53 +131,6 @@ class GCN_Mid(nn.Module):
 
         return output
 
-
-class HGNNLayer(nn.Module):
-    def __init__(self, n_hyper_layer):
-        super(HGNNLayer, self).__init__()
-
-        self.h_layer = n_hyper_layer
-
-    def forward(self, embeds, i_hyper, u_hyper=None):
-        i_ret = embeds
-        for _ in range(self.h_layer):
-            lat = torch.mm(i_hyper.T, i_ret)
-            i_ret = torch.mm(i_hyper, lat)
-            # u_ret = torch.mm(u_hyper, lat)
-        # return u_ret, i_ret
-        return i_ret
-
-class Hyper_Graph_Network(nn.Module):
-    def __init__(self, embedding_size, hylab, n_hyper_layer, bias=False):
-
-        super(Hyper_Graph_Network, self).__init__()
-        self.hylab = hylab
-        self.hyper_edge = Parameter(torch.FloatTensor(embedding_size, hylab))
-        self.hgnnLayer = HGNNLayer(n_hyper_layer)
-        if bias:
-            self.bias = Parameter(torch.FloatTensor(embedding_size))
-        else:
-            self.register_parameter('bias', None)
-        self.reset_parameters()
-        self.drop = nn.Dropout(0.5)
-
-    def reset_parameters(self):
-
-        stdv = 1. / math.sqrt(self.hyper_edge.size(1))
-        self.hyper_edge.data.uniform_(-stdv, stdv)
-        if self.bias is not None:
-            self.bias.data.uniform_(-stdv, stdv)
-
-    def forward(self, embedding, adj=None):
-
-        item_similar = torch.mm(embedding, self.hyper_edge)
-        # user_similar = torch.spmm(adj, item_similar)
-        item_label = nn.functional.gumbel_softmax(item_similar, 0.2, dim=1, hard=False)
-        # user_label = nn.functional.gumbel_softmax(user_similar, 0.2, dim=1, hard=False)
-
-        item_emb = self.hgnnLayer(embedding, self.drop(item_label))
-        return item_emb
-
 class Item_Graph_Convolution(nn.Module):
 
     def __init__(self, features_size, embedding_size, mode, low_k, mid_k):    # 16, 16, concat
