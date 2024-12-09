@@ -38,7 +38,34 @@ way2:
 
 
 Taking the Appliances dataset as an example, the correspondence between files and folders is as follows
-![img_2.png](img_2.png)
+
+
+    data_preprocess/
+    │
+    ├── data/
+    │   └── Appliances.json
+    │
+    ├── embs/
+    │   └── Appliances_embeddings.npz
+    │
+    ├── processed/
+    │   └── Appliances.npz
+    │
+    ├── raw_data/
+    │   └── meta_Appliances.json
+    │
+    ├── stats/
+    │
+    ├── tmp/
+        ├── Appliances_cid2_dict.txt
+        ├── Appliances_cid3_dict.txt
+        ├── Appliances_cor.edges
+        ├── Appliances_id_dict.txt
+        ├── Appliances_sim.edges
+        ├── filtered_Appliances_cor.edges
+        ├── filtered_Appliances_sim.edges
+        └── filtered_meta_Appliances.json
+
 
 
 
