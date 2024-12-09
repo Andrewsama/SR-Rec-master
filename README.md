@@ -6,7 +6,7 @@ This is the PyTorch implementation for **SR-Rec** proposed in the paper **Simila
 
 ![img_1.png](img_1.png)
 
-## 2. Running environment
+## 1. Running environment
 
 We develop our codes in the following environment:
 
@@ -15,7 +15,7 @@ We develop our codes in the following environment:
 - torch==1.13.0
 - torch-cuda=11.7
 
-## 3. Datasets
+## 2. Datasets
 
 | Dataset      | Appliances   | Grocery | Home |
 | ------------ |----------| ------  | -------------|
@@ -23,7 +23,7 @@ We develop our codes in the following environment:
 | Edges        | 8,290    | 642,884 | 776,766      |
 | Avg. Degree  | 20.6     | 33.4    | 20.6         |
 
-## 4. Data Preprocessing
+## 3. Data Preprocessing
 way1:
 - Download raw_data from https://nijianmo.github.io/amazon/index.html.
 - Put the meta data file in <tt>./data_preprocess/raw_data/</tt>.
@@ -69,7 +69,7 @@ Taking the Appliances dataset as an example, the correspondence between files an
 
 
 
-## 5. How to run the codes
+## 4. How to run the codes
 
 
 ```python9
