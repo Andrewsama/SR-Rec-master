@@ -34,7 +34,7 @@ way1:
     ```
 
 way2:
-- We provide the download method of [Google Cloud](https://drive.google.com/drive/folders/1kCx6WllSrI9KUVCdo2u2BoAmuSnlHYPm?usp=sharing) for the convenience of use, the link is xxx.
+- We provide the download method of [Google Cloud](https://drive.google.com/drive/folders/1kCx6WllSrI9KUVCdo2u2BoAmuSnlHYPm?usp=sharing) for the convenience of use.
 
 
 Taking the Appliances dataset as an example, the correspondence between files and folders is as follows
