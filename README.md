@@ -2,7 +2,7 @@
  
 This is the PyTorch implementation for **SR-Rec** proposed in the paper **Similar or Related: Spectral-Based Item Relationship Mining with Graph Convolutional Network for Complementary Recommendation**.
 
-> The paper is currently under review.
+> The paper is accepted by IEEE Transactions on Artificial Intelligence (TAI).
 
 ![img_1.png](img_1.png)
 
